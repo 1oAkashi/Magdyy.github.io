@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s;
+        }
+
+        body.dark-mode {
+            background-color: #333;
+        }
+
+        header {
+            background-color: #454444;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .contact-container {
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .contact-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #009688;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-button:hover {
+            background-color: #00776b;
+        }
+
+        .contact-info {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            flex: 0 0 calc(50% - 20px);
+            max-width: calc(50% - 20px);
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .contact-info img {
+            max-width: 63px;
+            height: auto;
+        }
+
+        .contact-link {
+            background-color: #009688;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-link:hover {
+            background-color: #00776b;
+        }
+
+        .square-icon {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <div class="contact-container">
+        <div class="contact-info">
+            <img src="facebook-icon.png" alt="Facebook Icon" class="square-icon">
+            <h2>Facebook</h2>
+            <p>Connect with us on Facebook.</p>
+            <a class="contact-link" href="https://www.facebook.com/profile.php?id=100009315430138">Visit</a>
+        </div>
+        <div class="contact-info">
+            <img src="instagram-icon.png" alt="Instagram Icon" class="square-icon">
+            <h2>Instagram</h2>
+            <p>Follow us on Instagram for updates.</p>
+            <a class="contact-link" href="https://www.instagram.com/magdy_masryy/">Visit</a>
+        </div>
+        <div class="contact-info">
+            <img src="youtube-icon.png" alt="YouTube Icon" class="square-icon">
+            <h2>YouTube</h2>
+            <p>Watch our videos on YouTube.</p>
+            <a class="contact-link" href="https://www.youtube.com/@user-fr6wz7bb9w">Visit</a>
+        </div>
+        <div class="contact-info">
+            <img src="whatsapp-icon.png" alt="WhatsApp Icon" class="square-icon">
+            <h2>WhatsApp Group</h2>
+            <p>Join our WhatsApp group for discussions.</p>
+            <a class="contact-link" href="https://chat.whatsapp.com/yourgroupcode">Join Group</a>
+        </div>
+        <div class="contact-info">
+            <img src="phone-icon.png" alt="Phone Icon" class="square-icon">
+            <h2>Phone Number</h2>
+            <p>Contact us at: +90 5346581730</p>
+        </div>
+    </div>
+    <a class="contact-button" href="index.html">Back to Home</a>
+</body>
+</html>

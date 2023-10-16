@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bookstore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.5s;
+        }
+
+        body.dark-mode {
+            background-color: #333;
+        }
+
+        header {
+            background-color: #454444;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .book {
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            flex: 0 0 calc(40% - 20px);
+            max-width: calc(40% - 20px);
+            transition: transform 0.3s;
+        }
+
+        .book:hover {
+            transform: scale(1.05);
+        }
+
+        .book img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .buy-button {
+            background-color: #009688;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: #00776b;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .theme-toggle-label {
+            font-size: 16px;
+            margin-right: 5px;
+        }
+
+        .toggle-checkbox {
+            display: none;
+        }
+
+        .toggle-switch {
+            width: 40px;
+            height: 20px;
+            background-color: #ccc;
+            border-radius: 25px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .toggle-bar {
+            width: 20px;
+            height: 20px;
+            background-color: #009688;
+            border-radius: 25px;
+            position: absolute;
+            transition: transform 0.3s;
+        }
+
+        input:checked + .toggle-switch .toggle-bar {
+            transform: translateX(20px);
+        }
+
+        .contact-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #009688;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-button:hover {
+            background-color: #00776b;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Bookstore</h1>
+    </header>
+    <label class="theme-toggle">
+        <span class="theme-toggle-label">Dark Mode</span>
+        <input type="checkbox" class="toggle-checkbox" id="dark-mode-toggle" onclick="toggleDarkMode()">
+        <div class="toggle-switch">
+            <div class="toggle-bar"></div>
+        </div>
+    </label>
+    <div class="book-container">
+        <div class="book">
+            <img src="book1.jpg" alt="Book 1">
+            <h2>Book 1</h2>
+            <p>Price: TRY 100.00</p>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="book">
+            <img src="book2.jpg" alt="Book 2">
+            <h2>Book 2</h2>
+            <p>Price: TRY 100.00</p>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="book">
+            <img src="book3.jpg" alt="Book 3">
+            <h2>Book 3</h2>
+            <p>Price: TRY 100.00</p>
+            <button class="buy-button">Buy Now</button>
+        </div>
+        <div class="book">
+            <img src="book4.jpg" alt="Book 4">
+            <h2>Book 4</h2>
+            <p>Price: TRY 100.00</p>
+            <button class="buy-button">Buy Now</button>
+        </div>
+    </div>
+    <a class="contact-button" href="contact.html">Contact</a>
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
